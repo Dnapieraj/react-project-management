@@ -3,6 +3,7 @@ import globals from 'globals'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import reactRefreshPlugin from 'eslint-plugin-react-refresh'
+import eslintPluginImport from 'eslint-plugin-import'
 
 export default [
 	js.configs.recommended,
@@ -12,6 +13,7 @@ export default [
 			react: reactPlugin,
 			'react-hooks': reactHooksPlugin,
 			'react-refresh': reactRefreshPlugin,
+			import: eslintPluginImport,
 		},
 		languageOptions: {
 			ecmaVersion: 'latest',
@@ -32,6 +34,7 @@ export default [
 			'react-hooks/rules-of-hooks': 'error',
 			'react-hooks/exhaustive-deps': 'warn',
 			'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+			'import/no-unresolved': 'off',
 		},
 	},
 ]
